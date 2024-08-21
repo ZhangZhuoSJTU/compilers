@@ -1940,9 +1940,9 @@ mod tests {
             ("0.8.20", EvmVersion::Shanghai, Some(EvmVersion::Shanghai)),
             ("0.8.20", EvmVersion::Cancun, Some(EvmVersion::Shanghai)),
             // Cancun
-            ("0.8.24", EvmVersion::Homestead, Some(EvmVersion::Homestead)),
-            ("0.8.24", EvmVersion::Shanghai, Some(EvmVersion::Shanghai)),
-            ("0.8.24", EvmVersion::Cancun, Some(EvmVersion::Cancun)),
+            ("0.8.25", EvmVersion::Homestead, Some(EvmVersion::Homestead)),
+            ("0.8.25", EvmVersion::Shanghai, Some(EvmVersion::Shanghai)),
+            ("0.8.25", EvmVersion::Cancun, Some(EvmVersion::Cancun)),
             // Prague
             ("0.8.26", EvmVersion::Homestead, Some(EvmVersion::Homestead)),
             ("0.8.26", EvmVersion::Shanghai, Some(EvmVersion::Shanghai)),

@@ -79,7 +79,7 @@ pub const SHANGHAI_SOLC: Version = Version::new(0, 8, 20);
 
 /// Cancun support
 /// <https://soliditylang.org/blog/2024/01/26/solidity-0.8.24-release-announcement/>
-pub const CANCUN_SOLC: Version = Version::new(0, 8, 24);
+pub const CANCUN_SOLC: Version = Version::new(0, 8, 25);
 
 /// Prague support
 /// <https://github.com/ethereum/solidity/pull/15152>
