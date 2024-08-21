@@ -38,8 +38,8 @@ use crate::output_selection::{ContractOutputSelection, OutputSelection};
 use foundry_compilers_core::{
     error::SolcError,
     utils::{
-        strip_prefix_owned, BERLIN_SOLC, BYZANTIUM_SOLC, CANCUN_SOLC, CONSTANTINOPLE_SOLC,
-        ISTANBUL_SOLC, LONDON_SOLC, PARIS_SOLC, PETERSBURG_SOLC, PRAGUE_SOLC, SHANGHAI_SOLC,
+        strip_prefix_owned, BERLIN_SOLC, BYZANTIUM_SOLC, CANCUN_SOLC, ISTANBUL_SOLC, LONDON_SOLC,
+        PARIS_SOLC, PETERSBURG_SOLC, PRAGUE_SOLC, SHANGHAI_SOLC,
     },
 };
 pub use serde_helpers::{deserialize_bytes, deserialize_opt_bytes};
@@ -838,8 +838,6 @@ impl EvmVersion {
                 Self::Istanbul
             } else if self >= Self::Petersburg && *version >= PETERSBURG_SOLC {
                 Self::Petersburg
-            } else if self >= Self::Constantinople && *version >= CONSTANTINOPLE_SOLC {
-                Self::Constantinople
             } else if self >= Self::Byzantium {
                 Self::Byzantium
             } else {
@@ -1914,8 +1912,8 @@ mod tests {
             ("0.4.21", EvmVersion::London, Some(EvmVersion::Byzantium)),
             // Constantinople bug fix
             ("0.4.22", EvmVersion::Homestead, Some(EvmVersion::Homestead)),
-            ("0.4.22", EvmVersion::Constantinople, Some(EvmVersion::Constantinople)),
-            ("0.4.22", EvmVersion::London, Some(EvmVersion::Constantinople)),
+            ("0.4.22", EvmVersion::Constantinople, Some(EvmVersion::Byzantium)),
+            ("0.4.22", EvmVersion::London, Some(EvmVersion::Byzantium)),
             // Petersburg
             ("0.5.5", EvmVersion::Homestead, Some(EvmVersion::Homestead)),
             ("0.5.5", EvmVersion::Petersburg, Some(EvmVersion::Petersburg)),
